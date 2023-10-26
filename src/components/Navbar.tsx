@@ -8,6 +8,8 @@ import { TwitterIcon, GithubIcon, Linkedin } from './Icons';
 import { motion } from 'framer-motion';
 const MotionLink = motion(Link);
 
+// TODO agregar iconito para el cambio de idioma
+
 interface CustomLinkTypes {
   href: string;
   title: string;
