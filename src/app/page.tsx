@@ -3,7 +3,6 @@ import GeneralWrapper from '@/components/Wrappers/General';
 import AnimatedText from '@/components/AnimatedText';
 import profileImg from '../../public/images/profile/developer-pic-1.png';
 import Link from 'next/link';
-import { LinkArrow } from '@/components/Icons';
 import HireMe from '@/components/HireMe';
 
 export default function Home() {
@@ -36,7 +35,7 @@ export default function Home() {
                 download
                 target={'_blank'}
               >
-                <LinkArrow /> CV / Resume
+                CV / Resume
               </Link>
               <Link
                 href="mailto:titealvarado@gmail.com"
