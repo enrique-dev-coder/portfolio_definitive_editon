@@ -4,6 +4,7 @@ import Image from 'next/image';
 import AnimatedText from '@/components/AnimatedText';
 import GeneralWrapper from '@/components/Wrappers/General';
 import Counter from '@/components/Counter';
+import Skills from '@/components/Skills';
 import profilePic from '../../../public/images/profile/developer-pic-2.jpg';
 
 // NOTE use this to change metadata of the current page
@@ -21,6 +22,7 @@ const page = () => {
     <main className="flex w-full flex-col items-center justify-center">
       <GeneralWrapper className="pt-16">
         <AnimatedText text="About Me" className=" mb-8" />
+        {/*intro section */}
         <div className="grid w-full grid-cols-8 gap-16">
           <div className="col-span-3 flex flex-col items-start justify-start ">
             <p className="font-medium">
@@ -62,6 +64,8 @@ const page = () => {
             <Counter number={5} title="Years of experience" />
           </article>
         </div>
+        {/* my skills section */}
+        <Skills />
       </GeneralWrapper>
     </main>
   );
