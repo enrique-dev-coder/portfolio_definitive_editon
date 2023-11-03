@@ -16,6 +16,7 @@ const SkillTag = ({ name, x, y }: SkillTagProps) => {
       className="absolute z-0 flex cursor-pointer items-center justify-center rounded-full font-semibold bg-dark shadow-dark text-light py-3 px-6"
       whileHover={{ scale: 1.05 }}
       initial={{ x: 0, y: 0 }}
+      // animate when in view
       whileInView={{ x: x, y: y }}
       transition={{ duration: 1.5 }}
     >

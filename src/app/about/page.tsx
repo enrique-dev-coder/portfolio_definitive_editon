@@ -5,7 +5,9 @@ import AnimatedText from '@/components/AnimatedText';
 import GeneralWrapper from '@/components/Wrappers/General';
 import Counter from '@/components/Counter';
 import Skills from '@/components/Skills';
+import Experience from '@/components/Experience';
 import profilePic from '../../../public/images/profile/developer-pic-2.jpg';
+import Education from '@/components/Education';
 
 // NOTE use this to change metadata of the current page
 
@@ -66,6 +68,9 @@ const page = () => {
         </div>
         {/* my skills section */}
         <Skills />
+        {/* my experience section */}
+        <Experience />
+        <Education />
       </GeneralWrapper>
     </main>
   );
