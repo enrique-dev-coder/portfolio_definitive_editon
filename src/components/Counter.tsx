@@ -26,14 +26,22 @@ const Counter = ({ number, title }: { number: number; title: string }) => {
   }, [springValue, number]);
 
   return (
-    <div className="flex flex-col items-end justify-center">
+    <div className="flex flex-col items-end justify-center md:items-center">
       <div>
-        <span className="inline-block text-7xl font-bold " ref={ref}>
+        <span
+          className="inline-block text-7xl font-bold md:text-6xl  sm:text-5xl xs:text-4xl"
+          ref={ref}
+        >
           {number}
         </span>
-        <span className="text-7xl font-bold">+</span>
+        <span className="text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
+          +
+        </span>
       </div>
-      <h2 className="text-xl  font-medium capitalize text-dark dark:text-light">
+      <h2
+        className="text-xl  font-medium capitalize text-dark dark:text-light  
+      2xl:text-center md:text-lg sm:text-base xs:text-sm"
+      >
         {title}
       </h2>
     </div>

@@ -23,10 +23,16 @@ const page = () => {
   return (
     <main className="flex w-full flex-col items-center justify-center dark:text-light">
       <GeneralWrapper className="pt-16">
-        <AnimatedText text="About Me" className=" mb-8" />
+        <AnimatedText
+          text="About Me"
+          className=" mb-8 lg:!text-7xl sm:!text-6xl xs:!text-4xl  sm:mb-4"
+        />
         {/*intro section */}
-        <div className="grid w-full grid-cols-8 gap-16">
-          <div className="col-span-3 flex flex-col items-start justify-start ">
+        <div className="grid w-full grid-cols-8 gap-16 sm:gap-8">
+          <div
+            className="col-span-3 flex flex-col items-start justify-start
+          2xl:col-span-4 md:order-2 md:col-span-8 "
+          >
             <p className="font-medium">
               Hi, I&apos;m CodeBucks, a web developer and UI/UX designer with a
               passion for creating beautiful, functional, and user-centered
@@ -47,20 +53,27 @@ const page = () => {
               project.
             </p>
           </div>
-          {/*profile image*/}
+          {/*profile image
+          NOTE: user order-1 to change layout order in a a grid layout for responsive design
+          */}
           <div
             className="col-span-3 relative h-max  rounded-2xl border-2 border-solid border-dark dark:border-light
-          bg-light dark:bg-dark p-8"
+          bg-light dark:bg-dark p-8 
+          2xl:col-span-4 md:order-1 md:col-span-8"
           >
             <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark dark:bg-light" />
             <Image
               src={profilePic}
               alt="Enrique Alvarado"
               className="w-full h-auto rounded-2xl"
+              priority
             />
           </div>
           {/*counters*/}
-          <article className="col-span-2 flex flex-col items-end justify-between">
+          <article
+            className="col-span-2 flex flex-col items-end justify-between
+                2xl:col-span-8 2xl:flex-row 2xl:items-center md:order-3"
+          >
             <Counter number={50} title="satisfied clients" />
             <Counter number={40} title="Projects completed" />
             <Counter number={5} title="Years of experience" />

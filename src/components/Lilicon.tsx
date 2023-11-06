@@ -8,7 +8,7 @@ const Lilicon = ({ reference }: { reference: MutableRefObject<null> }) => {
     target: reference,
   });
   return (
-    <figure className="absolute left-0 stroke-dark dark:stroke-light">
+    <figure className="absolute left-0 stroke-dark dark:stroke-light md:-left-1 sm:-left-4 xs:-left-7 ">
       <svg
         className="-rotate-90"
         width={'75'}

@@ -25,7 +25,7 @@ const Details = ({
   return (
     <li
       ref={ref}
-      className=" my-8 first:mt-0 w-[80%] last:mb-0  mx-auto flex flex-col items-center justify-between"
+      className=" my-8 first:mt-0 w-[60%] md:w-[80%] last:mb-0  mx-auto flex flex-col items-center justify-between"
     >
       <Lilicon reference={ref} />
       <motion.div
@@ -33,7 +33,7 @@ const Details = ({
         whileInView={{ y: 0 }}
         transition={{ duration: 0.5, type: 'spring' }}
       >
-        <h3 className="capitalize font-bold text-2xl ">
+        <h3 className="capitalize font-bold text-2xl sm:text-xl xs:text-lg">
           {position}&nbsp;{' '}
           <a
             href={companyLink}
@@ -43,10 +43,10 @@ const Details = ({
             @{company}
           </a>
           <br />
-          <span className="capitalize font-medium text-xl text-dark/75 dark:text-light/75">
+          <span className="capitalize font-medium text-xl text-dark/75 dark:text-light/75 xs:text-sm">
             {time} | {address}
           </span>
-          <p className="font-medium  text-lg w-full">{work}</p>
+          <p className="font-medium  text-lg w-full md:text-sm">{work}</p>
         </h3>
       </motion.div>
     </li>
@@ -64,16 +64,21 @@ const Experience = () => {
 
   return (
     <div className=" my-24">
-      <h2 className="font-bold text-8xl mb-32 w-full text-center">
+      <h2 className="font-bold text-8xl mb-32 w-full text-center   md:text-6xl md:mt-32 sm:text-4xl sm:my-10 ">
         Experience
       </h2>
-      <div ref={ref} className="w-[75%] h-screen mx-auto relative ">
+      <div
+        ref={ref}
+        className="w-[75%] h-screen mx-auto relative lg:w-[90%] md:w-full sm:h-auto  "
+      >
         <motion.div
           // scale line while scrolling
           style={{ scaleY: scrollYProgress }}
-          className="absolute left-9 w-[4px] top-0 h-full bg-dark dark:bg-light origin-top"
+          className="absolute left-9 w-[4px] top-0 h-full bg-dark dark:bg-light origin-top
+          md:w-[2px] md:left-[30px] xs:left-[10px]
+          "
         />
-        <ul className="w-full flex flex-col items-start justify-between ml-4">
+        <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
           <Details
             position="Software Engineer"
             address="Mountain View, CA"
