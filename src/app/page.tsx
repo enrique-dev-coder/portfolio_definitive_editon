@@ -7,7 +7,7 @@ import HireMe from '@/components/HireMe';
 
 export default function Home() {
   return (
-    <main className="flex  items-center text-dark w-full min-h-screen">
+    <main className="flex  items-center text-dark  dark:text-light w-full min-h-screen">
       <GeneralWrapper className="pt-0">
         <div className="flex items-center justify-between w-full">
           <div className="w-1/2">
@@ -22,15 +22,16 @@ export default function Home() {
               text="Turning Vision Into Reality With Code And Design."
               className="!text-6xl !text-left"
             />
-            <p className="my-4 text-base font-medium">
+            <p className="my-4 text-base font-medium ">
               As a skilled full-stack developer, I am dedicated to turning ideas
               into innovative web applications. Explore my latest projects and
               articles, showcasing my expertise in React.js and web development.
             </p>
             <div className="flex items-center self-start m-2">
               <Link
-                className="flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold
-               border-2 border-solid border-transparent hover:border-dark  transition-all duration-150 hover:bg-light hover:text-dark"
+                className="flex items-center bg-dark text-light dark:bg-light dark:text-dark p-2.5 px-6 rounded-lg text-lg font-semibold
+               border-2 border-solid border-transparent transition-all duration-150 
+               hover:border-dark hover:dark:border-light hover:bg-light hover:text-dark hover:dark:bg-dark hover:dark:text-light "
                 href="/archivo.pdf"
                 download
                 target={'_blank'}

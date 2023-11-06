@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 
 const page = () => {
   return (
-    <main className="flex w-full flex-col items-center justify-center">
+    <main className="flex w-full flex-col items-center justify-center dark:text-light">
       <GeneralWrapper className="pt-16">
         <AnimatedText text="About Me" className=" mb-8" />
         {/*intro section */}
@@ -49,10 +49,10 @@ const page = () => {
           </div>
           {/*profile image*/}
           <div
-            className="col-span-3 relative h-max  rounded-2xl border-2 border-solid border-dark
-          bg-light p-8"
+            className="col-span-3 relative h-max  rounded-2xl border-2 border-solid border-dark dark:border-light
+          bg-light dark:bg-dark p-8"
           >
-            <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark" />
+            <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark dark:bg-light" />
             <Image
               src={profilePic}
               alt="Enrique Alvarado"

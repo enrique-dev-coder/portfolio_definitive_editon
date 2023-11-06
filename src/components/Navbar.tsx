@@ -4,8 +4,9 @@ import React from 'react';
 import Link from 'next/link';
 import Logo from './Logo';
 import { usePathname } from 'next/navigation';
-import { TwitterIcon, GithubIcon, Linkedin } from './Icons';
+import { TwitterIcon, GithubIcon, Linkedin, SunIcon, MoonIcon } from './Icons';
 import { motion } from 'framer-motion';
+import useThemeSwitcher from '@/hooks/useThemeSwitcher';
 const MotionLink = motion(Link);
 
 // TODO agregar iconito para el cambio de idioma
@@ -20,10 +21,13 @@ const CustomLink = ({ href, title, className }: CustomLinkTypes) => {
   const path = usePathname();
 
   return (
-    <Link href={href} className={`${className} mx-4 relative group`}>
+    <Link
+      href={href}
+      className={`${className} mx-4 dark:text-light relative group`}
+    >
       {title}
       <span
-        className={`h-[2px] inline-block  bg-dark absolute left-0 -bottom-2
+        className={`h-[2px] inline-block   bg-dark dark:bg-light absolute left-0 -bottom-2
       group-hover:w-full transition-[width] ease-in-out duration-300 
       ${path === href ? 'w-full' : 'w-0'}`}
       >
@@ -47,6 +51,8 @@ const IconLInk = ({ children }: { children: React.ReactNode }) => (
 );
 
 const Navbar = () => {
+  const [mode, setMode] = useThemeSwitcher();
+
   return (
     <header className="w-full px-32 py-8 font-medium flex items-center justify-between">
       <nav>
@@ -66,6 +72,16 @@ const Navbar = () => {
         <IconLInk>
           <Linkedin />
         </IconLInk>
+        <button
+          onClick={() => setMode(mode === 'light' ? 'dark' : 'light')}
+          className="ml-3 flex items-center justify-center rounded-full p-1 bg-dark dark:bg-light text-light dark:text-dark "
+        >
+          {mode === 'dark' ? (
+            <SunIcon className="fill-dark" />
+          ) : (
+            <MoonIcon className="fill-dark" />
+          )}
+        </button>
       </motion.nav>
 
       <div className="absolute left-[50%] top-2 translate-x-[-50%]">

@@ -33,7 +33,9 @@ const Counter = ({ number, title }: { number: number; title: string }) => {
         </span>
         <span className="text-7xl font-bold">+</span>
       </div>
-      <h2 className="text-xl  font-medium capitalize text-dark">{title}</h2>
+      <h2 className="text-xl  font-medium capitalize text-dark dark:text-light">
+        {title}
+      </h2>
     </div>
   );
 };

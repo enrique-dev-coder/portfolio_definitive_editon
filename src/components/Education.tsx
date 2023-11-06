@@ -28,7 +28,7 @@ const Details = ({ type, time, place, info }: DetailsProps) => {
           {type}
 
           <br />
-          <span className="capitalize font-medium text-xl text-dark/75">
+          <span className="capitalize font-medium text-xl text-dark/75 dark:text-primaryDark ">
             {time} | {place}
           </span>
           <p className="font-medium  text-lg w-full">{info}</p>
@@ -54,7 +54,7 @@ const Education = () => {
         <motion.div
           // scale line while scrolling
           style={{ scaleY: scrollYProgress }}
-          className="absolute left-9 w-[4px] top-0 h-full bg-dark origin-top"
+          className="absolute left-9 w-[4px] top-0 h-full bg-dark origin-top dark:bg-light"
         />
         <ul className="w-full flex flex-col items-start justify-between ml-4">
           <Details
