@@ -10,7 +10,7 @@ import useThemeSwitcher from '@/hooks/useThemeSwitcher';
 const MotionLink = motion(Link);
 
 // TODO agregar iconito para el cambio de idioma
-
+// TODO arreglar el iconito cuando se le da click y se hace como una tacha
 interface CustomLinkTypes {
   href: string;
   title: string;
@@ -158,7 +158,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="w-full px-32 py-8 font-medium flex items-center justify-between relative">
+    <header className="w-full px-32 py-8 font-medium flex items-center justify-between relative md:px-16 sm:px-8">
       <button
         className=" flex-col justify-center items-center hidden lg:flex"
         onClick={handleMenuClick}

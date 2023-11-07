@@ -69,7 +69,7 @@ const Experience = () => {
       </h2>
       <div
         ref={ref}
-        className="w-[75%] h-screen mx-auto relative lg:w-[90%] md:w-full sm:h-auto  "
+        className="w-[75%]  mx-auto relative lg:w-[90%] md:w-full h-auto  "
       >
         <motion.div
           // scale line while scrolling
