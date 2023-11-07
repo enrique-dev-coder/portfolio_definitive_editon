@@ -1,3 +1,4 @@
+/* eslint-disable */
 import * as React from 'react';
 
 const SVGIcon = ({ className, children, width, height, viewBox, ...props }) => (
