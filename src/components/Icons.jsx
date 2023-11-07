@@ -1,19 +1,6 @@
 import * as React from 'react';
 
-const SVGIcon = ({
-  className,
-  children,
-  width,
-  height,
-  viewBox,
-  ...props
-}: {
-  className?: string;
-  children: React.ReactNode;
-  width: string;
-  height: string;
-  viewBox: string;
-}) => (
+const SVGIcon = ({ className, children, width, height, viewBox, ...props }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     className={`w-full h-auto ${className}`}
@@ -98,7 +85,9 @@ export const CircularText = () => {
   );
 };
 
-export const SunIcon = ({ className, ...rest }: { className: string }) => (
+// eslint-disable-next-line
+
+export const SunIcon = ({ className, ...rest }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24"
@@ -275,7 +264,7 @@ export const SunIcon = ({ className, ...rest }: { className: string }) => (
     </circle>
   </svg>
 );
-export const MoonIcon = ({ className, ...rest }: { className: string }) => (
+export const MoonIcon = ({ className, ...rest }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24"
