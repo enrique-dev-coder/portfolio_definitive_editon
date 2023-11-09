@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image, { StaticImageData } from 'next/image';
 import { motion } from 'framer-motion';
 import { GithubIcon } from './Icons';
+import TechStack from './TechStack';
 
 interface FeatureProjectProps {
   type: string;
@@ -95,55 +96,64 @@ const FeatureProject = ({
   return (
     <div className="col-span-12 md:col-span-8  sm:col-span-4">
       <article
-        className="relative w-full flex items-center justify-between rounded-3xl border border-solid
+        className="relative w-full flex flex-col items-center justify-between rounded-3xl border border-solid
      border-dark dark:border-light bg-light dark:bg-dark  shadow-2xl p-12  rounded-br-2xl
      md:flex-col md:p-6 xs:p-2
      "
       >
         <div className="absolute top-0 -right-3 -z-10 w-[100.5%] h-[103%] rounded-[2.5rem] bg-dark dark:bg-light rounded-br-3xl xs:right-0" />
-
-        <Link
-          href={link}
-          target="_blank"
-          className="w-1/2 cursor-pointer overflow-hidden rounded-lg md:w-full "
-        >
-          <FramerImage
-            src={img}
-            alt={title}
-            className="w-full h-auto"
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.2 }}
-          />
-        </Link>
-
-        <div className="w-1/2 flex flex-col items-start justify-between pl-6   md:w-full md:pl-0 ">
-          <span className=" text-primary dark:text-primaryDark font-medium  text-xl">
-            {type}
-          </span>
+        {/* project description*/}
+        <div className="flex items-center justify-between ">
           <Link
             href={link}
             target="_blank"
-            className="hover:underline  underline-offset-2"
+            className="w-1/2 cursor-pointer overflow-hidden rounded-lg md:w-full "
           >
-            <h2 className="my-2 w-full text-left text-4xl font-bold dark:text-light md:text-2xl sm:text-lg">
-              {title}
-            </h2>
+            <FramerImage
+              src={img}
+              alt={title}
+              className="w-full h-auto"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.2 }}
+            />
           </Link>
-          <p className="my-2 font-medium text-dark text-lg dark:text-light md:text-base sm:text-sm">
-            {summary}
-          </p>
-          <div className="mt-2 flex items-center">
-            <Link href={githubLink} target="_blank" className="w-10">
-              <GithubIcon />
-            </Link>
+
+          <div className="w-1/2 flex flex-col items-start justify-between pl-6   md:w-full md:pl-0 ">
+            <span className=" text-primary dark:text-primaryDark font-medium  text-xl">
+              {type}
+            </span>
             <Link
               href={link}
               target="_blank"
-              className="ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold"
+              className="hover:underline  underline-offset-2"
             >
-              Visit Project
+              <h2 className="my-2 w-full text-left text-4xl font-bold dark:text-light md:text-2xl sm:text-lg">
+                {title}
+              </h2>
             </Link>
+            <p className="my-2 font-medium text-dark text-lg dark:text-light md:text-base sm:text-sm">
+              {summary}
+            </p>
+            <div className="mt-2 flex items-center">
+              <Link href={githubLink} target="_blank" className="w-10">
+                <GithubIcon />
+              </Link>
+              <Link
+                href={link}
+                target="_blank"
+                className="ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold"
+              >
+                Visit Project
+              </Link>
+            </div>
           </div>
+        </div>
+        {/*tech used*/}
+        <div className="w-full">
+          <p className="  text-primary dark:text-primaryDark   font-bold  text-2xl pt-5 ">
+            Tech Used
+          </p>
+          <TechStack techUsed={['aws', 'css', 'git', 'html', 'js', 'next']} />
         </div>
       </article>
     </div>
