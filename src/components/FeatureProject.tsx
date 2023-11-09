@@ -103,20 +103,22 @@ const FeatureProject = ({
       >
         <div className="absolute top-0 -right-3 -z-10 w-[100.5%] h-[103%] rounded-[2.5rem] bg-dark dark:bg-light rounded-br-3xl xs:right-0" />
         {/* project description*/}
-        <div className="flex items-center justify-between ">
-          <Link
-            href={link}
-            target="_blank"
-            className="w-1/2 cursor-pointer overflow-hidden rounded-lg md:w-full "
-          >
-            <FramerImage
-              src={img}
-              alt={title}
-              className="w-full h-auto"
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.2 }}
-            />
-          </Link>
+        <div className="flex items-center justify-between md:flex-col ">
+          <div className=" gradient_projects px-14 py-10  rounded-xl sm:px-2 sm:py-1 ">
+            <Link
+              href={link}
+              target="_blank"
+              className="w-1/2 cursor-pointer overflow-hidden rounded-lg md:w-full "
+            >
+              <FramerImage
+                src={img}
+                alt={title}
+                className="w-full h-auto rounded-lg"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.2 }}
+              />
+            </Link>
+          </div>
 
           <div className="w-1/2 flex flex-col items-start justify-between pl-6   md:w-full md:pl-0 ">
             <span className=" text-primary dark:text-primaryDark font-medium  text-xl">
@@ -153,7 +155,23 @@ const FeatureProject = ({
           <p className="  text-primary dark:text-primaryDark   font-bold  text-2xl pt-5 ">
             Tech Used
           </p>
-          <TechStack techUsed={['aws', 'css', 'git', 'html', 'js', 'next']} />
+          {/* use ctrl + spc to see the  techs existing in the array*/}
+          <TechStack
+            techUsed={[
+              'aws',
+              'css',
+              'git',
+              'html',
+              'js',
+              'next',
+              'aws',
+              'css',
+              'git',
+              'html',
+              'js',
+              'next',
+            ]}
+          />
         </div>
       </article>
     </div>
