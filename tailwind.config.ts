@@ -16,6 +16,7 @@ const config: Config = {
         primaryDark: '#58E6D9', // 80,230,217
       },
       backgroundImage: {
+        'gradient-to-r': ' linear-gradient(to right, var(--tw-gradient-stops))',
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',

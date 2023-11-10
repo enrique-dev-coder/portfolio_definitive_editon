@@ -36,24 +36,20 @@ const page = () => {
               className="col-span-3 flex flex-col items-start justify-start
           2xl:col-span-4 md:order-2 md:col-span-8 "
             >
-              <p className="font-medium">
-                Hi, I&apos;m CodeBucks, a web developer and UI/UX designer with
-                a passion for creating beautiful, functional, and user-centered
-                digital experiences. With 4 years of experience in the field. I
-                am always looking for new and innovative ways to bring my
-                clients&apos; visions to life.
+              <p className="font-medium my-4">
+                Hi,I&apos;m Enrqiue, a Full-Stack Developer with a deep passion
+                for front-end technologies, I bring five years of dedicated
+                experience in web development to the table. Originally
+                graduating with a degree in Industrial Engineering, I embarked
+                on a transformative journey to pursue my love for coding.
               </p>
               <p className="font-medium my-4">
-                I believe that design is about more than just making things look
-                pretty – it&apos;s about solving problems and creating
-                intuitive, enjoyable experiences for users.{' '}
-              </p>
-              <p className="font-medium">
-                Whether I&apos;m working on a website, mobile app, or other
-                digital product, I bring my commitment to design excellence and
-                user-centered thinking to every project I work on. I look
-                forward to the opportunity to bring my skills and passion to
-                your next project.
+                My career shift allowed me to seamlessly blend analytical
+                problem-solving from my engineering background with the
+                creativity and precision required in front-end development. I
+                thrive on crafting intuitive user experiences that seamlessly
+                marry form and function. Join me as I continue to innovate and
+                create in the ever-evolving landscape of web development.
               </p>
             </div>
             {/*profile image

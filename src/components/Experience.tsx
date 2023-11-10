@@ -80,54 +80,40 @@ const Experience = () => {
         />
         <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
           <Details
-            position="Software Engineer"
-            address="Mountain View, CA"
-            company="Google"
-            companyLink="https://www.google.com/"
+            position="Full Stack Web developer"
+            address="London, UK"
+            company="Proxify"
+            companyLink="https://proxify.io/"
             time="2022-Present "
-            work="Worked on a team responsible for developing new features for Google's 
-          search engine, including improving the accuracy and relevance of search results and 
-          developing new tools for data analysis and visualization."
+            work="Worked on a team responsible for developing projects to 
+            customers located in Europe and USA, we use nodejs,nextjs, aws  as default but we adapt to customers needs
+            ."
           />
           <Details
-            position="Software Engineer"
-            address="Mountain View, CA"
-            company="Google"
-            companyLink="https://www.google.com/"
-            time="2022-Present "
-            work="Worked on a team responsible for developing new features for Google's 
-          search engine, including improving the accuracy and relevance of search results and 
-          developing new tools for data analysis and visualization."
+            position="Front End Engineer"
+            address="Spain"
+            company="Chatcenter Network"
+            companyLink="https://chatcenter.net/"
+            time="2020-2022"
+            work="Team colaboration for updating and improving current UI of the app, craft and design of new UI Features,overall improve of UI with a redesign of every screen, unit testing of components, test e2e, use of react context api for state management, development of wordpress plugins."
           />
           <Details
-            position="Software Engineer"
-            address="Mountain View, CA"
-            company="Google"
-            companyLink="https://www.google.com/"
-            time="2022-Present "
-            work="Worked on a team responsible for developing new features for Google's 
-          search engine, including improving the accuracy and relevance of search results and 
-          developing new tools for data analysis and visualization."
+            position="Lead Developer"
+            address="Buenos Aires, Argentina"
+            company="Launchy"
+            companyLink="https://launchy.me/"
+            time="2018-2020"
+            work="In my role at Launchy, I led a team dedicated to creating effective web pages designed for startups. Drawing on my solid grasp of front-end technologies and user-friendly design principles, I played a key role in turning creative ideas into visually appealing and functional digital space."
           />
           <Details
-            position="Software Engineer"
-            address="Mountain View, CA"
-            company="Google"
-            companyLink="https://www.google.com/"
-            time="2022-Present "
-            work="Worked on a team responsible for developing new features for Google's 
-          search engine, including improving the accuracy and relevance of search results and 
-          developing new tools for data analysis and visualization."
-          />
-          <Details
-            position="Software Engineer"
-            address="Mountain View, CA"
-            company="Google"
-            companyLink="https://www.google.com/"
-            time="2022-Present "
-            work="Worked on a team responsible for developing new features for Google's 
-          search engine, including improving the accuracy and relevance of search results and 
-          developing new tools for data analysis and visualization."
+            position="Quality Engineer"
+            address="Coahuila, México"
+            company="Cooper Standard"
+            companyLink="/"
+            time="2014-2018 "
+            work="Process Quality Engineer for a manufacturing company of fuel lines for General Motors, Stellantis,Ford,Toyota and Rivian.
+            My job consisted on discussing quality issues of products with the customer representatives.
+            "
           />
         </ul>
       </div>

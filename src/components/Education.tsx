@@ -65,38 +65,15 @@ const Education = () => {
         />
         <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
           <Details
-            type="Bachelor Of Science In Computer Science"
-            info="Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, and Artificial 
-          Intelligence."
-            place="Massachusetts Institute Of Technology (MIT)"
+            type="Courses in many platforms like udemy,AWS,BEDU,platzi,stack skills etc"
+            info="Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, javascript mastery,back end , front end, aws"
+            place="Udemy,AWS,BEDU,platzi,stack skills etc"
             time="2016-2020"
           />
           <Details
-            type="Bachelor Of Science In Computer Science"
-            info="Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, and Artificial 
-          Intelligence."
-            place="Massachusetts Institute Of Technology (MIT)"
-            time="2016-2020"
-          />
-          <Details
-            type="Bachelor Of Science In Computer Science"
-            info="Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, and Artificial 
-          Intelligence."
-            place="Massachusetts Institute Of Technology (MIT)"
-            time="2016-2020"
-          />
-          <Details
-            type="Bachelor Of Science In Computer Science"
-            info="Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, and Artificial 
-          Intelligence."
-            place="Massachusetts Institute Of Technology (MIT)"
-            time="2016-2020"
-          />
-          <Details
-            type="Bachelor Of Science In Computer Science"
-            info="Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, and Artificial 
-          Intelligence."
-            place="Massachusetts Institute Of Technology (MIT)"
+            type="College Degree at industrial and process engineering"
+            info="Relevant courses included Statistics, process analisis, problem solving methodologies"
+            place="Instituto de Estudios Superiores de Monterrey (ITESM)"
             time="2016-2020"
           />
         </ul>

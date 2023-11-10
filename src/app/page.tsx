@@ -5,6 +5,7 @@ import profileImg from '../../public/images/profile/developer-pic-1.png';
 import Link from 'next/link';
 import HireMe from '@/components/HireMe';
 import TransitionEffect from '@/components/TransitionEffect';
+import { GithubIcon } from '@/components/Icons';
 
 export default function Home() {
   return (
@@ -24,7 +25,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col items-center self-center lg:w-1/2 md:w-full lg:text-center ">
               <AnimatedText
-                text="Turning Vision Into Reality With Code And Design."
+                text="Hello! I´m Enrique, welcome to my portfolio."
                 className="!text-6xl !text-left 
               xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl"
               />
@@ -39,7 +40,7 @@ export default function Home() {
                   className="flex items-center bg-dark text-light dark:bg-light dark:text-dark p-2.5 px-6 rounded-lg text-lg font-semibold
                border-2 border-solid border-transparent transition-all duration-150 
                hover:border-dark hover:dark:border-light hover:bg-light hover:text-dark hover:dark:bg-dark hover:dark:text-light 
-               md:p-2 md:px-4 md:text-base
+               md:p-2 md:px-4 md:text-base 
                "
                   href="/archivo.pdf"
                   download
@@ -49,10 +50,28 @@ export default function Home() {
                 </Link>
                 <Link
                   href="mailto:titealvarado@gmail.com"
-                  className="ml-4 text-xl font-bold capitalize md:text-base"
+                  className="ml-4 text-xl font-bold capitalize md:text-base sm:mt-4"
                 >
                   Checkout my projects!
                 </Link>
+              </div>
+              <div className="flex items-center self-start gap-6  my-4 sm:flex-col sm:self-center">
+                <div className="w-12  ">
+                  <GithubIcon />
+                </div>
+                <div
+                  className="
+                  text-xl font-bold  sm:text-xs
+                  bg-gradient-to-r from-violet-900 via-purple-800 to-fuchsia-700 
+                  dark:from-sky-300  dark:via-cyan-300 dark:to-sky-300
+                  inline-block text-transparent bg-clip-text"
+                >
+                  <p>Feel free to get the source code of my portfolio</p>
+                  <p>
+                    please dont forget to give a star{' '}
+                    <span className=" text-2xl sm:text-lg">⭐</span>
+                  </p>
+                </div>
               </div>
             </div>
           </div>

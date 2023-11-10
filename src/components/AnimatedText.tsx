@@ -42,14 +42,17 @@ const AnimatedText = ({
         variants={quote}
         initial="initial"
         animate="animate"
-        className={` inline-block w-full text-dark dark:text-light font-bold capitalize text-8xl ${className}
-        
+        className={`  w-full  font-bold capitalize text-8xl  leading-tight ${className} 
+      
         `}
       >
         {text.split(' ').map((word, index) => (
           <motion.span
             key={word + '-' + index}
-            className="inline-block"
+            className="
+            bg-gradient-to-r from-purple-800 via-violet-900 to-purple-800
+            dark:from-sky-300  dark:via-cyan-300 dark:to-sky-300
+            inline-block text-transparent bg-clip-text"
             variants={singleWord}
           >
             {word}&nbsp;
