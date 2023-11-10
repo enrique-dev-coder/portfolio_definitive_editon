@@ -15,6 +15,10 @@ import {
   TypeScriptIcon,
   WoocommerceIcon,
   WordpressIcon,
+  ElementorIcon,
+  FigmaIcon,
+  JestIcon,
+  SassIcon,
 } from './TechIcons';
 
 export type IconMap = {
@@ -40,9 +44,13 @@ export type IconKeys =
   | 'tailwind'
   | 'ts'
   | 'woo'
-  | 'wp';
+  | 'wp'
+  | 'jest'
+  | 'figma'
+  | 'elementor'
+  | 'sass';
 
-// TODO Agregar jest y cypress
+// TODO Agregar jest y cypress, agregar elementor , figma,open AI
 export const IconsObj: IconMap = {
   aws: {
     icon: <AwsIcon className="" />,
@@ -115,5 +123,21 @@ export const IconsObj: IconMap = {
     icon: <WordpressIcon className="" />,
 
     title: 'Wordpress',
+  },
+  jest: {
+    icon: <JestIcon className="" />,
+    title: 'Jest',
+  },
+  figma: {
+    icon: <FigmaIcon className="" />,
+    title: 'Figma',
+  },
+  elementor: {
+    icon: <ElementorIcon className="" />,
+    title: 'Elementor',
+  },
+  sass: {
+    icon: <SassIcon className="" />,
+    title: 'Sass/scss',
   },
 };

@@ -12,8 +12,8 @@ const TechStack = ({ techUsed }: { techUsed: IconKeys[] }) => {
         className=" bg-dark text-light cursor-pointer dark:bg-light dark:text-dark flex   items-center gap-2 px-2 py-2 rounded-3xl"
       >
         {/*icon*/}
-        <div className=" w-8 md:w-7 sm:w-5">
-          <div className="">{icon}</div>
+        <div className="w-8 md:w-7 sm:w-5">
+          <div>{icon}</div>
         </div>
         {/*title*/}
         <div className="text-xl font-semibold md:text-lg sm:text-base">
