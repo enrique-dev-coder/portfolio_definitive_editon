@@ -1,6 +1,6 @@
-'use client';
-import React from 'react';
-import { motion } from 'framer-motion';
+"use client";
+import React from "react";
+import { motion } from "framer-motion";
 
 const quote = {
   initial: {
@@ -42,13 +42,13 @@ const AnimatedText = ({
         variants={quote}
         initial="initial"
         animate="animate"
-        className={`  w-full  font-bold capitalize text-8xl  leading-tight ${className} 
+        className={`  w-full  font-bold  text-8xl  leading-tight ${className} 
       
         `}
       >
-        {text.split(' ').map((word, index) => (
+        {text.split(" ").map((word, index) => (
           <motion.span
-            key={word + '-' + index}
+            key={word + "-" + index}
             className="
             bg-gradient-to-r from-purple-800 via-violet-900 to-purple-800
             dark:from-sky-300  dark:via-cyan-300 dark:to-sky-300
