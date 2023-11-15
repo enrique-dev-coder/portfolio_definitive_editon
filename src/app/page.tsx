@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import GeneralWrapper from '@/components/Wrappers/General';
 import AnimatedText from '@/components/AnimatedText';
 import profileImg from '../../public/images/profile/developer-pic-1.png';
@@ -6,6 +5,7 @@ import Link from 'next/link';
 import HireMe from '@/components/HireMe';
 import TransitionEffect from '@/components/TransitionEffect';
 import { GithubIcon } from '@/components/Icons';
+import Dude from '@/3dModels/Dude';
 
 export default function Home() {
   return (
@@ -14,14 +14,8 @@ export default function Home() {
       <main className="flex  items-center text-dark  dark:text-light w-full min-h-screen sm:min-h-[65vh]">
         <GeneralWrapper className="pt-0 md:pt-16 sm:pt-8">
           <div className="flex items-center justify-between w-full md:flex-col">
-            <div className="w-full sm:hidden lg:inline-block">
-              <Image
-                src={profileImg}
-                alt="Enrique Alvarado"
-                className=" h-auto w-full"
-                priority
-                sizes="(min-width: 808px) 50vw, 100vw"
-              />
+            <div className="w-1/2 h-[460px] sm:hidden lg:inline-block">
+              <Dude />
             </div>
             <div className="flex flex-col items-center self-center lg:w-1/2 md:w-full lg:text-center ">
               <AnimatedText

@@ -27,7 +27,9 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/components/Icons.jsx"
+    "src/components/Icons.jsx",
+    "src/lib/model.js",
+    "src/3dModels/Dude.jsx"
   ],
   "exclude": ["node_modules"]
 }
