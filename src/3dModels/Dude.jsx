@@ -8,8 +8,8 @@ function easeOutCirc(x) {
   return Math.sqrt(1 - Math.pow(x - 1, 4));
 }
 // TODO add a better spinner
-export const DudeSpinner = () => <div>spin</div>;
-export const DudeContainer = forwardRef(({ children }, ref) => (
+const DudeSpinner = () => <div>spin</div>;
+const DudeContainer = forwardRef(({ children }, ref) => (
   <div
     ref={ref}
     style={{ height: '400px', width: '400px' }}
