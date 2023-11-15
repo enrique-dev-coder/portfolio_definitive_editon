@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
-
+import AnimatedText from './AnimatedText';
 // TODO : add more skills
 
 interface SkillTagProps {
@@ -29,12 +29,10 @@ const SkillTag = ({ name, x, y }: SkillTagProps) => {
 const Skills = () => {
   return (
     <>
-      <h2
-        className="font-bold text-8xl mt-32 w-full text-center 
-      md:text-6xl md:mt-32 sm:text-4xl sm:mt-10 "
-      >
-        My Skills
-      </h2>
+      <AnimatedText
+        text="My skills"
+        className=" my-8 lg:!text-7xl sm:!text-6xl xs:!text-4xl  sm:mb-4"
+      />
       <div
         className="w-full h-screen flex items-center justify-center rounded-full bg-circularLight dark:bg-circularDark
       lg:h-[80vh] sm:h-[60vh] xs:h-[50vh]

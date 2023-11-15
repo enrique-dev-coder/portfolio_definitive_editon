@@ -1,6 +1,5 @@
 import GeneralWrapper from '@/components/Wrappers/General';
 import AnimatedText from '@/components/AnimatedText';
-import profileImg from '../../public/images/profile/developer-pic-1.png';
 import Link from 'next/link';
 import HireMe from '@/components/HireMe';
 import TransitionEffect from '@/components/TransitionEffect';
@@ -20,8 +19,7 @@ export default function Home() {
             <div className="flex flex-col items-center self-center lg:w-1/2 md:w-full lg:text-center ">
               <AnimatedText
                 text="Hello! I´m Enrique, welcome to my portfolio."
-                className="!text-6xl !text-left 
-              xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl"
+                className="!text-4xl !text-left lg:!text-center  sm:!text-3xl"
               />
               <p className="my-4 text-base font-medium md:text-sm sm:text-xs ">
                 As a skilled full-stack developer, I am dedicated to turning

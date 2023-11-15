@@ -273,7 +273,15 @@ const page = () => {
             <p className="text-center text-4xl text-dark dark:text-light">
               If you reached the end, then maybe you would want to work with me{' '}
             </p>
-            <button className=" bg-primary  font-medium mt-4 dark:bg-primaryDark text-2xl px-4 py-1  rounded-lg">
+            <button
+              className="
+              bg-gradient-to-r from-purple-800 via-violet-900 to-purple-800
+            dark:from-sky-300  dark:via-cyan-300 dark:to-sky-300
+              font-bold mt-4 text-4xl px-6 py-2 rounded-lg text-light dark:text-dark/75
+              transition-all duration-300 ease-in-out 
+              hover:scale-110 hover:shadow-lg dark:hover:shadow-cyan-500/50 hover:shadow-purple-400
+              "
+            >
               Contact Me
             </button>
           </section>

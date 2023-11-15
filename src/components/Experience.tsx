@@ -1,6 +1,7 @@
 'use client';
 import React, { useRef } from 'react';
 import { motion, useScroll } from 'framer-motion';
+import AnimatedText from './AnimatedText';
 import Lilicon from './Lilicon';
 
 interface DetailsProps {
@@ -64,9 +65,10 @@ const Experience = () => {
 
   return (
     <div className=" my-24">
-      <h2 className="font-bold text-8xl mb-32 w-full text-center   md:text-6xl md:mt-32 sm:text-4xl sm:my-10 ">
-        Experience
-      </h2>
+      <AnimatedText
+        text="Experience"
+        className=" mb-8 lg:!text-7xl sm:!text-6xl xs:!text-4xl  sm:mb-4"
+      />
       <div
         ref={ref}
         className="w-[75%]  mx-auto relative lg:w-[90%] md:w-full h-auto  "
