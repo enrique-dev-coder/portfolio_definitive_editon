@@ -7,7 +7,7 @@ import { loadGLTFModel } from '../lib/model';
 function easeOutCirc(x) {
   return Math.sqrt(1 - Math.pow(x - 1, 4));
 }
-
+// TODO add a better spinner
 export const DudeSpinner = () => <div>spin</div>;
 export const DudeContainer = forwardRef(({ children }, ref) => (
   <div
