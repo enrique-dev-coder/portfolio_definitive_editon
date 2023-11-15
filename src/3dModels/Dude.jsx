@@ -4,11 +4,9 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { loadGLTFModel } from '../lib/model';
 
-function easeOutCirc(x) {
-  return Math.sqrt(1 - Math.pow(x - 1, 4));
-}
 // TODO add a better spinner
 const DudeSpinner = () => <div>spin</div>;
+
 const DudeContainer = forwardRef(({ children }, ref) => (
   <div
     ref={ref}
@@ -24,7 +22,11 @@ const DudeContainer = forwardRef(({ children }, ref) => (
     {children}
   </div>
 ));
+
 const Dude = () => {
+  function easeOutCirc(x) {
+    return Math.sqrt(1 - Math.pow(x - 1, 4));
+  }
   const refContainer = useRef();
   const [loading, setLoading] = useState(true);
   const refRenderer = useRef();
@@ -158,5 +160,5 @@ const Dude = () => {
     </DudeContainer>
   );
 };
-
+Dude.displayName = 'Dude';
 export default Dude;
