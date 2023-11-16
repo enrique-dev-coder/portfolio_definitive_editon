@@ -65,8 +65,12 @@ const ContactPage = () => {
       <TransitionEffect />
       <GeneralWrapper>
         <AnimatedText text="Get in touch" className=" !text-4xl" />
-        <section className="flex">
-          <form ref={formRef} className="w-1/2" onSubmit={handleSubmit}>
+        <section className="flex sm:flex-col">
+          <form
+            ref={formRef}
+            className="w-1/2 sm:w-full sm: mb-4"
+            onSubmit={handleSubmit}
+          >
             <div className="flex flex-col my-2">
               <label className=" text-dark dark:text-light font-semibold text-lg">
                 Name *
@@ -123,7 +127,7 @@ const ContactPage = () => {
               </button>
             </div>
           </form>
-          <div className="w-1/2 max-w-[400px] h-[355px] mx-auto">
+          <div className="w-1/2 sm:w-full max-w-[400px] h-[355px] sm:h-[280px] mx-auto">
             <PikaRenderer />
           </div>
         </section>

@@ -121,7 +121,7 @@ const FeatureProject = ({
         {/* project description*/}
         <div className="flex items-center justify-between md:flex-col ">
           {img ? (
-            <div className=" gradient_projects px-14 py-10 w-1/2 rounded-xl sm:px-2 sm:py-1 ">
+            <div className=" gradient_projects px-14 py-10 w-1/2 rounded-xl sm:px-2 sm:py-2 sm:w-full  sm:mb-2">
               <Link
                 href={link}
                 target="_blank"

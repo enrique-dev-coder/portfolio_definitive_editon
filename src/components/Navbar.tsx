@@ -175,7 +175,7 @@ const Navbar = () => {
         ></span>
         <span
           className={`bg-dark dark:bg-light block transition-all duration-300 ease-out  h-0.5 w-6 rounded-sm translate-y-0.5
-          ${openMenu ? '-rotate-45 -translate-y-1' : 'translate-y-0.5'}
+          ${openMenu ? '-rotate-45 -translate-y-[3px]' : 'translate-y-0.5'}
         `}
         ></span>
       </button>
