@@ -9,7 +9,7 @@ const montse = Montserrat({ subsets: ['latin'] });
 
 // TODO: Add meta description for every page
 export const metadata: Metadata = {
-  title: 'Enrique Alvarado',
+  title: 'Enrique Alvarado Portfolio',
   description: 'Full stack web developer',
 };
 
