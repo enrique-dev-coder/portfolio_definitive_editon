@@ -28,8 +28,10 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/components/Icons.jsx",
+    "src/components/PikaRenderer.jsx",
     "src/lib/model.js",
-    "src/3dModels/Dude.jsx"
+    "src/3dModels/Dude.jsx",
+    "src/3dModels/Pika.jsx"
   ],
   "exclude": ["node_modules"]
 }
