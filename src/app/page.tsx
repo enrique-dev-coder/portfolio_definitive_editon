@@ -51,6 +51,7 @@ export default function Home() {
                 href="https://github.com/enrique-dev-coder/portfolio_definitive_editon"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="w-full"
               >
                 <div className="flex items-center self-start gap-6  my-4 sm:flex-col sm:self-center">
                   <div className="w-12  ">
