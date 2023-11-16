@@ -8,6 +8,7 @@ import './globals.css';
 const montse = Montserrat({ subsets: ['latin'] });
 
 // TODO: Add meta description for every page
+// TODO: Add whats app to contact page
 export const metadata: Metadata = {
   title: 'Enrique Alvarado Portfolio',
   description: 'Full stack web developer',

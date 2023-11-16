@@ -1,6 +1,7 @@
 import React, { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { Pika } from '@/3dModels/Pika';
+import PikaLoader from './PikaLoader';
 
 const PikaRenderer = () => {
   return (
@@ -14,7 +15,7 @@ const PikaRenderer = () => {
         {/* Configuración de sombras */}
         <fog attach="fog" args={['black', 5, 20]} />
 
-        <Suspense fallback={null}>
+        <Suspense fallback={<PikaLoader />}>
           <Pika
             castShadow
             receiveShadow
