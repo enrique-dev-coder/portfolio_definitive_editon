@@ -1,9 +1,9 @@
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
-import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+import { DRACOLoader } from "three/addons/loaders/DRACOLoader.js";
 
 const draco = new DRACOLoader();
-draco.setDecoderConfig({ type: 'js' });
-draco.setDecoderPath('https://www.gstatic.com/draco/v1/decoders/');
+draco.setDecoderConfig({ type: "js" });
+draco.setDecoderPath("https://www.gstatic.com/draco/v1/decoders/");
 
 export function loadGLTFModel(
   scene,
@@ -19,12 +19,12 @@ export function loadGLTFModel(
       glbPath,
       (gltf) => {
         const obj = gltf.scene;
-        obj.name = 'dog';
+        obj.name = "dog";
         obj.position.y = 0;
         obj.position.x = 0;
-        obj.scale.x = 2;
-        obj.scale.y = 2;
-        obj.scale.z = 2;
+        obj.scale.x = 1.5;
+        obj.scale.y = 1.5;
+        obj.scale.z = 1.5;
         obj.receiveShadow = true;
         obj.castShadow = true;
         scene.add(obj);

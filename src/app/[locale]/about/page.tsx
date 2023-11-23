@@ -1,14 +1,14 @@
-import type { Metadata } from 'next';
-import React from 'react';
-import Image from 'next/image';
-import AnimatedText from '@/components/AnimatedText';
-import GeneralWrapper from '@/components/Wrappers/General';
-import Counter from '@/components/Counter';
-import Skills from '@/components/Skills';
-import Experience from '@/components/Experience';
-import profilePic from '../../../public/images/profile/developer-pic-2.jpg';
-import Education from '@/components/Education';
-import TransitionEffect from '@/components/TransitionEffect';
+import type { Metadata } from "next";
+import React from "react";
+import Image from "next/image";
+import AnimatedText from "@/components/AnimatedText";
+import GeneralWrapper from "@/components/Wrappers/General";
+import Counter from "@/components/Counter";
+import Skills from "@/components/Skills";
+import Experience from "@/components/Experience";
+import profilePic from "../../../../public/images/profile/developer-pic-2.jpg";
+import Education from "@/components/Education";
+import TransitionEffect from "@/components/TransitionEffect";
 
 // NOTE use this to change metadata of the current page
 
@@ -16,8 +16,8 @@ import TransitionEffect from '@/components/TransitionEffect';
 // TODO cambiar la foto por una mia
 
 export const metadata: Metadata = {
-  title: 'About Me',
-  description: 'About my web developer experience',
+  title: "About Me",
+  description: "About my web developer experience",
 };
 
 const page = () => {

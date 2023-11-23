@@ -1,31 +1,32 @@
-import GeneralWrapper from '@/components/Wrappers/General';
-import AnimatedText from '@/components/AnimatedText';
-import Link from 'next/link';
-import HireMe from '@/components/HireMe';
-import TransitionEffect from '@/components/TransitionEffect';
-import { GithubIcon } from '@/components/Icons';
-import Dude from '@/3dModels/Dude';
+import GeneralWrapper from "@/components/Wrappers/General";
+import AnimatedText from "@/components/AnimatedText";
+import { useTranslations } from "next-intl";
+import HireMe from "@/components/HireMe";
+import TransitionEffect from "@/components/TransitionEffect";
+import { GithubIcon } from "@/components/Icons";
+import Dude from "@/3dModels/Dude";
+import { Link } from "@/navigation";
 
 export default function Home() {
+  const t = useTranslations("Home");
+
   return (
     <>
       <TransitionEffect />
       <main className="flex  items-center text-dark  dark:text-light w-full min-h-screen sm:min-h-[65vh]">
+        {/* <p>{t("title")}</p> */}
         <GeneralWrapper className="pt-0 md:pt-16 sm:pt-8">
           <div className="flex items-center justify-between w-full md:flex-col">
-            <div className="w-1/2 sm:w-full h-[460px] sm:h-[350px] lg:inline-block">
+            <div className="w-1/2 sm:w-full h-[460px] mx-auto sm:h-[350px] lg:inline-block">
               <Dude />
             </div>
-            <div className="flex flex-col items-center self-center lg:w-1/2 md:w-full lg:text-center ">
+            <div className="flex flex-col items-center self-center w-[60%] lg:w-1/2 md:w-full lg:text-center ">
               <AnimatedText
-                text="Hello! I´m Enrique, welcome to my portfolio."
+                text={t("title")}
                 className="!text-4xl !text-left lg:!text-center  sm:!text-3xl xs:!text-xl"
               />
               <p className="my-4 text-base font-medium md:text-sm sm:text-xs ">
-                As a skilled full-stack developer, I am dedicated to turning
-                ideas into innovative web applications. Explore my latest
-                projects and articles, showcasing my expertise in React.js and
-                web development.
+                {t("introP")}
               </p>
               <div className="flex items-center self-start m-2 lg:self-center sm:flex-col">
                 <Link
@@ -36,15 +37,15 @@ export default function Home() {
                "
                   href="/archivo.pdf"
                   download
-                  target={'_blank'}
+                  target={"_blank"}
                 >
                   CV / Resume
                 </Link>
                 <Link
-                  href="mailto:titealvarado@gmail.com"
+                  href={`/projects`}
                   className="ml-4 text-xl font-bold capitalize md:text-base sm:mt-4"
                 >
-                  Checkout my projects!
+                  {t("CtA")}
                 </Link>
               </div>
               <a
@@ -66,7 +67,7 @@ export default function Home() {
                   >
                     <p>Feel free to get the source code of my portfolio</p>
                     <p>
-                      please dont forget to give a star{' '}
+                      please dont forget to give a star{" "}
                       <span className=" text-2xl sm:text-lg">⭐</span>
                     </p>
                   </div>

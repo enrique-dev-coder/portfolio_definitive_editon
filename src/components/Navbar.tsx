@@ -1,16 +1,24 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import Link from 'next/link';
-import Logo from './Logo';
-import { usePathname, useRouter } from 'next/navigation';
-import { TwitterIcon, GithubIcon, Linkedin, SunIcon, MoonIcon } from './Icons';
-import { motion } from 'framer-motion';
-import useThemeSwitcher from '@/hooks/useThemeSwitcher';
+import React, { useState } from "react";
+
+import Logo from "./Logo";
+import {
+  TwitterIcon,
+  GithubIcon,
+  Linkedin,
+  SunIcon,
+  MoonIcon,
+  ChangeIcon,
+} from "./Icons";
+import { motion } from "framer-motion";
+import useThemeSwitcher from "@/hooks/useThemeSwitcher";
+import { Link, usePathname, useRouter } from "@/navigation";
 const MotionLink = motion(Link);
 
 // TODO agregar iconito para el cambio de idioma
-// TODO arreglar el iconito cuando se le da click y se hace como una tacha
+type language = "es" | "en";
+
 interface CustomLinkTypes {
   href: string;
   title: string;
@@ -26,17 +34,16 @@ interface MobileCustomLinkTypes {
 
 const CustomLink = ({ href, title, className }: CustomLinkTypes) => {
   const path = usePathname();
-
   return (
     <Link
-      href={href}
+      href={`${href}`}
       className={`${className} mx-4 dark:text-light relative group`}
     >
       {title}
       <span
         className={`h-[2px] inline-block   bg-dark dark:bg-light absolute left-0 -bottom-2
       group-hover:w-full transition-[width] ease-in-out duration-300 
-      ${path === href ? 'w-full' : 'w-0'}`}
+      ${path === href ? "w-full" : "w-0"}`}
       >
         &nbsp;
       </span>
@@ -47,12 +54,12 @@ const CustomLink = ({ href, title, className }: CustomLinkTypes) => {
 const IconLInk = ({ children }: { children: React.ReactNode }) => (
   <MotionLink
     href="/"
-    target={'_blank'}
+    target={"_blank"}
     whileHover={{ y: -2 }}
     whileTap={{ scale: 0.9 }}
     className="w-9 mx-3"
   >
-    {' '}
+    {" "}
     {children}
   </MotionLink>
 );
@@ -93,7 +100,7 @@ const MobileMenu = ({
     <>
       {isOpen ? (
         <motion.div
-          initial={{ scale: 0, opacity: 0, x: '-50%', y: '-50%' }}
+          initial={{ scale: 0, opacity: 0, x: "-50%", y: "-50%" }}
           // note : use animate prop when elemented is mounted
           animate={{ scale: 1, opacity: 1 }}
           className={`min-w-[70vw]  flex-col justify-between items-center fixed top-1/2 left-1/2 
@@ -134,10 +141,10 @@ const MobileMenu = ({
               <Linkedin />
             </IconLInk>
             <button
-              onClick={() => setMode(mode === 'light' ? 'dark' : 'light')}
+              onClick={() => setMode(mode === "light" ? "dark" : "light")}
               className="ml-3 flex items-center justify-center rounded-full p-1 bg-dark dark:bg-light text-light dark:text-dark "
             >
-              {mode === 'dark' ? (
+              {mode === "dark" ? (
                 <SunIcon className="fill-dark" />
               ) : (
                 <MoonIcon className="fill-dark" />
@@ -150,7 +157,11 @@ const MobileMenu = ({
   );
 };
 
-const Navbar = () => {
+const Navbar = ({ lang }: { lang: language }) => {
+  console.log(lang);
+  const pathname = usePathname();
+  const router = useRouter();
+  console.log(pathname);
   const [mode, setMode] = useThemeSwitcher();
   const [openMenu, setOpenMenu] = useState<boolean>(false);
   const handleMenuClick = () => {
@@ -165,17 +176,17 @@ const Navbar = () => {
       >
         <span
           className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm -translate-y-0.5
-          ${openMenu ? 'rotate-45 translate-y-1' : '-translate-y-0.5'}
+          ${openMenu ? "rotate-45 translate-y-1" : "-translate-y-0.5"}
         `}
         ></span>
         <span
           className={`bg-dark dark:bg-light block transition-all duration-300 ease-out  h-0.5 w-6 rounded-sm my-0.5 ${
-            openMenu ? 'opacity-0' : 'opacity-100'
+            openMenu ? "opacity-0" : "opacity-100"
           }`}
         ></span>
         <span
           className={`bg-dark dark:bg-light block transition-all duration-300 ease-out  h-0.5 w-6 rounded-sm 
-          ${openMenu ? '-rotate-45 -translate-y-1' : 'translate-y-0.5'}
+          ${openMenu ? "-rotate-45 -translate-y-1" : "translate-y-0.5"}
         `}
         ></span>
       </button>
@@ -198,14 +209,38 @@ const Navbar = () => {
             <Linkedin />
           </IconLInk>
           <button
-            onClick={() => setMode(mode === 'light' ? 'dark' : 'light')}
+            onClick={() => setMode(mode === "light" ? "dark" : "light")}
             className="ml-3 flex items-center justify-center rounded-full p-1 bg-dark dark:bg-light text-light dark:text-dark "
           >
-            {mode === 'dark' ? (
+            {mode === "dark" ? (
               <SunIcon className="fill-dark" />
             ) : (
               <MoonIcon className="fill-dark" />
             )}
+          </button>
+          {/*change language icon*/}
+          {/* Note: this is "hardcoded"  two support a lot of languages its better to get the locales object from i18n*/}
+          <button
+            onClick={() => {
+              if (lang === "en") {
+                router.replace(pathname, { locale: "es" });
+              } else if (lang === "es") {
+                router.replace(pathname, { locale: "en" });
+              }
+            }}
+          >
+            {lang === "en" ? (
+              <div className="ml-2 flex items-center  bg-black dark:bg-light rounded-md text-light dark:text-dark px-1 text-sm">
+                <p>English </p>
+                <ChangeIcon className="" />
+              </div>
+            ) : null}
+            {lang === "es" ? (
+              <div className="ml-2 flex items-center  bg-black dark:bg-light rounded-md text-light dark:text-dark px-1 text-sm">
+                <p>Español </p>
+                <ChangeIcon className="" />
+              </div>
+            ) : null}
           </button>
         </motion.nav>
       </div>

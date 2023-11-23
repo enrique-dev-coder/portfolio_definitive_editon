@@ -1,6 +1,6 @@
-import React from 'react';
-import { CircularText } from './Icons';
-import Link from 'next/link';
+import React from "react";
+import { CircularText } from "./Icons";
+import { Link } from "@/navigation";
 
 // TODO agregar imagen del whats
 
