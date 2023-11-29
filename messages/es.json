@@ -2,6 +2,7 @@
   "Home": {
     "title": "Hola! soy Enrique,bienvenido a mi portfolio.",
     "introP": " Desarrollador web comprometido a convertir tus proyectos digitales en una realidad. La idea de este portfolio es que puedas revisar todos mis proyectos , que van desde paginas sencillas en wordpress hasta web apps hechas con react, nextjs y node. ",
-    "CtA": "Revisa mis proyectos!"
+    "CtA": "Revisa mis proyectos!",
+    "Suggest": "Si te gusta mi portfolio puedes usar el codigo de el github, porfavor dejas una estrellita"
   }
 }

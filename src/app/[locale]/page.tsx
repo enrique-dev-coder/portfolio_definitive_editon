@@ -65,9 +65,8 @@ export default function Home() {
                   dark:from-sky-300  dark:via-cyan-300 dark:to-sky-300
                   inline-block text-transparent bg-clip-text"
                   >
-                    <p>Feel free to get the source code of my portfolio</p>
                     <p>
-                      please dont forget to give a star{" "}
+                      {t("Suggest")}{" "}
                       <span className=" text-2xl sm:text-lg">⭐</span>
                     </p>
                   </div>

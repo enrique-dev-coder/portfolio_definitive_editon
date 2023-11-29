@@ -1,8 +1,8 @@
-'use client';
-import React, { useRef } from 'react';
-import { motion, useScroll } from 'framer-motion';
-import AnimatedText from './AnimatedText';
-import Lilicon from './Lilicon';
+"use client";
+import React, { useRef } from "react";
+import { motion, useScroll } from "framer-motion";
+import AnimatedText from "./AnimatedText";
+import Lilicon from "./Lilicon";
 
 interface DetailsProps {
   position: string;
@@ -32,10 +32,10 @@ const Details = ({
       <motion.div
         initial={{ y: 50 }}
         whileInView={{ y: 0 }}
-        transition={{ duration: 0.5, type: 'spring' }}
+        transition={{ duration: 0.5, type: "spring" }}
       >
         <h3 className="capitalize font-bold text-2xl sm:text-xl xs:text-lg">
-          {position}&nbsp;{' '}
+          {position}&nbsp;{" "}
           <a
             href={companyLink}
             target="_blank"
@@ -59,7 +59,7 @@ const Experience = () => {
 
   // hook used for register the scrollY value
   const { scrollYProgress } = useScroll({
-    offset: ['start end', 'center start'],
+    offset: ["start end", "center start"],
     target: ref,
   });
 
@@ -75,7 +75,6 @@ const Experience = () => {
       >
         <motion.div
           // scale line while scrolling
-          style={{ scaleY: scrollYProgress }}
           className="absolute left-9 w-[4px] top-0 h-full bg-dark dark:bg-light origin-top
           md:w-[2px] md:left-[30px] xs:left-[10px]
           "

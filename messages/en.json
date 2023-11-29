@@ -2,6 +2,10 @@
   "Home": {
     "title": "Hello! I´m Enrique, welcome to my portfolio.",
     "introP": "As a skilled full-stack developer, I am dedicated to turning ideas into innovative web applications. Explore my latest projects and articles, showcasing my expertise in React.js and web development.",
-    "CtA": "Checkout my projects!"
+    "CtA": "Checkout my projects!",
+    "Suggest": "Feel free to get the source code of my portfolio please dont forget to give a star"
+  },
+  "About": {
+    "firstP": "Hi,I&apos;m Enrqiue, a Full-Stack Developer with a deep passion for front-end technologies, I bring five years of dedicated experience in web development to the table. Originally graduating with a degree in Industrial Engineering, I embarked on a transformative journey to pursue my love for coding."
   }
 }

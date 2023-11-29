@@ -6,17 +6,18 @@ Source: https://sketchfab.com/3d-models/pika-4abf0b10596544e7bed789c58f809897
 Title: Pika
 */
 
-import React, { useRef, useEffect } from 'react';
-import { useGLTF, useAnimations } from '@react-three/drei';
-import { useFrame } from '@react-three/fiber';
+import React, { useRef, useEffect } from "react";
+import { useGLTF, useAnimations } from "@react-three/drei";
+import { useFrame } from "@react-three/fiber";
 
 export function Pika({ ...props }) {
   const group = useRef();
-  const { nodes, materials, animations } = useGLTF('3D/pika.glb');
+  // bug: por el traductor le esta agregando en/es  a la ruta del modelo en el useGLTF
+  const { nodes, materials, animations } = useGLTF("../../3D/pika.glb");
   const { actions } = useAnimations(animations, group);
 
   useEffect(() => {
-    actions['Take 01'].play();
+    actions["Take 01"].play();
   }, []);
   // Agrega la rotación utilizando useFrame
   useFrame(() => {
@@ -47,147 +48,147 @@ export function Pika({ ...props }) {
                 castShadow
                 receiveShadow
                 geometry={nodes.Sphere002_0.geometry}
-                material={materials['Material.001']}
+                material={materials["Material.001"]}
               />
               <mesh
                 name="Sphere002_0_1"
                 castShadow
                 receiveShadow
                 geometry={nodes.Sphere002_0_1.geometry}
-                material={materials['Material.001']}
+                material={materials["Material.001"]}
               />
               <mesh
                 name="Sphere002_0_2"
                 castShadow
                 receiveShadow
                 geometry={nodes.Sphere002_0_2.geometry}
-                material={materials['Material.001']}
+                material={materials["Material.001"]}
               />
               <mesh
                 name="Sphere002_1"
                 castShadow
                 receiveShadow
                 geometry={nodes.Sphere002_1.geometry}
-                material={materials['Material.004']}
+                material={materials["Material.004"]}
               />
               <mesh
                 name="Sphere002_2"
                 castShadow
                 receiveShadow
                 geometry={nodes.Sphere002_2.geometry}
-                material={materials['Material.006']}
+                material={materials["Material.006"]}
               />
               <mesh
                 name="Sphere002_3"
                 castShadow
                 receiveShadow
                 geometry={nodes.Sphere002_3.geometry}
-                material={materials['Material.002']}
+                material={materials["Material.002"]}
               />
               <mesh
                 name="Sphere002_4"
                 castShadow
                 receiveShadow
                 geometry={nodes.Sphere002_4.geometry}
-                material={materials['Material.005']}
+                material={materials["Material.005"]}
               />
               <mesh
                 name="Sphere002_4_1"
                 castShadow
                 receiveShadow
                 geometry={nodes.Sphere002_4_1.geometry}
-                material={materials['Material.005']}
+                material={materials["Material.005"]}
               />
               <mesh
                 name="Sphere002_4_2"
                 castShadow
                 receiveShadow
                 geometry={nodes.Sphere002_4_2.geometry}
-                material={materials['Material.005']}
+                material={materials["Material.005"]}
               />
               <mesh
                 name="Sphere002_4_3"
                 castShadow
                 receiveShadow
                 geometry={nodes.Sphere002_4_3.geometry}
-                material={materials['Material.005']}
+                material={materials["Material.005"]}
               />
               <mesh
                 name="Sphere002_4_4"
                 castShadow
                 receiveShadow
                 geometry={nodes.Sphere002_4_4.geometry}
-                material={materials['Material.005']}
+                material={materials["Material.005"]}
               />
               <mesh
                 name="Sphere002_4_5"
                 castShadow
                 receiveShadow
                 geometry={nodes.Sphere002_4_5.geometry}
-                material={materials['Material.005']}
+                material={materials["Material.005"]}
               />
               <mesh
                 name="Sphere002_4_6"
                 castShadow
                 receiveShadow
                 geometry={nodes.Sphere002_4_6.geometry}
-                material={materials['Material.005']}
+                material={materials["Material.005"]}
               />
               <mesh
                 name="Sphere002_4_7"
                 castShadow
                 receiveShadow
                 geometry={nodes.Sphere002_4_7.geometry}
-                material={materials['Material.005']}
+                material={materials["Material.005"]}
               />
               <mesh
                 name="Sphere002_4_8"
                 castShadow
                 receiveShadow
                 geometry={nodes.Sphere002_4_8.geometry}
-                material={materials['Material.005']}
+                material={materials["Material.005"]}
               />
               <mesh
                 name="Sphere002_4_9"
                 castShadow
                 receiveShadow
                 geometry={nodes.Sphere002_4_9.geometry}
-                material={materials['Material.005']}
+                material={materials["Material.005"]}
               />
               <mesh
                 name="Sphere002_4_10"
                 castShadow
                 receiveShadow
                 geometry={nodes.Sphere002_4_10.geometry}
-                material={materials['Material.005']}
+                material={materials["Material.005"]}
               />
               <mesh
                 name="Sphere002_4_11"
                 castShadow
                 receiveShadow
                 geometry={nodes.Sphere002_4_11.geometry}
-                material={materials['Material.005']}
+                material={materials["Material.005"]}
               />
               <mesh
                 name="Sphere002_4_12"
                 castShadow
                 receiveShadow
                 geometry={nodes.Sphere002_4_12.geometry}
-                material={materials['Material.005']}
+                material={materials["Material.005"]}
               />
               <mesh
                 name="Sphere002_4_13"
                 castShadow
                 receiveShadow
                 geometry={nodes.Sphere002_4_13.geometry}
-                material={materials['Material.005']}
+                material={materials["Material.005"]}
               />
               <mesh
                 name="Sphere002_5"
                 castShadow
                 receiveShadow
                 geometry={nodes.Sphere002_5.geometry}
-                material={materials['Material.003']}
+                material={materials["Material.003"]}
               />
             </group>
           </group>
@@ -197,4 +198,4 @@ export function Pika({ ...props }) {
   );
 }
 
-useGLTF.preload('/pika.glb');
+useGLTF.preload("/pika.glb");

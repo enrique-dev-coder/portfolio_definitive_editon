@@ -1,19 +1,19 @@
-'use client';
-import React, { useState, useRef } from 'react';
-import GeneralWrapper from '@/components/Wrappers/General';
-import TransitionEffect from '@/components/TransitionEffect';
-import AnimatedText from '@/components/AnimatedText';
-import emailjs from '@emailjs/browser';
-import PikaRenderer from '@/components/PikaRenderer';
+"use client";
+import React, { useState, useRef } from "react";
+import GeneralWrapper from "@/components/Wrappers/General";
+import TransitionEffect from "@/components/TransitionEffect";
+import AnimatedText from "@/components/AnimatedText";
+import emailjs from "@emailjs/browser";
+import PikaRenderer from "@/components/PikaRenderer";
 
 // TODO: add form validation when message sent succesfully
 
 const ContactPage = () => {
   const formRef = useRef(null);
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
   const [isLoading, setIsLoading] = useState(false);
 
@@ -37,26 +37,26 @@ const ContactPage = () => {
           process.env.NEXT_PUBLIC_TEMPLATE_KEY,
           {
             from_name: formData.name,
-            to_name: 'Enrique',
+            to_name: "Enrique",
             from_email: formData.email,
-            to_email: 'titealvarado@gmail.com',
+            to_email: "titealvarado@gmail.com",
             message: formData.message,
           },
           process.env.NEXT_PUBLIC_PUBLIC_KEY
         )
         .then(() => {
-          console.log('mensaje mandado');
+          console.log("mensaje mandado");
           setFormData({
-            name: '',
-            email: '',
-            message: '',
+            name: "",
+            email: "",
+            message: "",
           });
         })
         .catch((error) => {
           console.log(error);
         });
     } else {
-      console.error('Una o más variables de entorno no están definidas.');
+      console.error("Una o más variables de entorno no están definidas.");
     }
   };
 
